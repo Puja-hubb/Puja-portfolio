@@ -5,9 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#080d19">
-
-  <title>Puja Kumari | Software Developer Portfolio</title>
-  <meta name="description" content="Portfolio of Puja Kumari, a software developer skilled in Python, Java, web development, AI projects, and data analytics.">
+  <meta name="description" content="Puja Kumari's software development portfolio featuring AI-focused projects, web applications, Python programming, and data analytics.">
+  <title>Puja Kumari | Software Developer</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,16 +21,12 @@
       --muted: #a1aec4;
       --accent: #8b9cff;
       --accent2: #62e4c5;
-      --border: rgba(174, 190, 220, 0.15);
+      --border: rgba(174, 190, 220, .15);
       --radius: 18px;
       --width: 1120px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     html {
       scroll-behavior: smooth;
@@ -41,27 +36,16 @@
     body {
       font-family: "DM Sans", sans-serif;
       background:
-        radial-gradient(ellipse at 15% 0%, rgba(94, 110, 220, 0.13), transparent 38%),
-        radial-gradient(ellipse at 90% 35%, rgba(55, 190, 168, 0.07), transparent 32%),
+        radial-gradient(ellipse at 15% 0%, rgba(94,110,220,.13), transparent 38%),
+        radial-gradient(ellipse at 90% 35%, rgba(55,190,168,.07), transparent 32%),
         var(--bg);
       color: var(--text);
       line-height: 1.7;
       overflow-x: hidden;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button, a {
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    a:focus-visible, button:focus-visible {
-      outline: 2px solid var(--accent2);
-      outline-offset: 4px;
-    }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible { outline: 2px solid var(--accent2); outline-offset: 4px; }
 
     .container {
       width: min(var(--width), calc(100% - 40px));
@@ -72,7 +56,7 @@
       position: sticky;
       top: 0;
       z-index: 10;
-      background: rgba(8, 13, 25, 0.88);
+      background: rgba(8,13,25,.88);
       border-bottom: 1px solid var(--border);
       backdrop-filter: blur(16px);
     }
@@ -92,26 +76,22 @@
       white-space: nowrap;
     }
 
-    .brand span {
-      color: var(--accent);
-    }
+    .brand span { color: var(--accent); }
 
     .nav-links {
       display: flex;
       align-items: center;
       gap: 24px;
       color: var(--muted);
-      font-size: 0.9rem;
+      font-size: .9rem;
     }
 
-    .nav-links a:hover {
-      color: var(--text);
-    }
+    .nav-links a:hover { color: var(--text); }
 
     .hero {
       padding: 100px 0 80px;
       display: grid;
-      grid-template-columns: 1.5fr 0.8fr;
+      grid-template-columns: 1.5fr .8fr;
       align-items: center;
       gap: 55px;
     }
@@ -123,7 +103,7 @@
       color: var(--accent2);
       text-transform: uppercase;
       letter-spacing: 2px;
-      font-size: 0.76rem;
+      font-size: .76rem;
       font-weight: 700;
       margin-bottom: 22px;
     }
@@ -133,7 +113,7 @@
       height: 8px;
       border-radius: 50%;
       background: var(--accent2);
-      box-shadow: 0 0 12px rgba(98, 228, 197, 0.5);
+      box-shadow: 0 0 12px rgba(98,228,197,.5);
     }
 
     h1, h2, h3 {
@@ -161,11 +141,7 @@
       margin-bottom: 30px;
     }
 
-    .button-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
+    .button-row { display: flex; flex-wrap: wrap; gap: 12px; }
 
     .btn {
       display: inline-flex;
@@ -174,15 +150,13 @@
       gap: 9px;
       padding: 12px 19px;
       border-radius: 10px;
-      font-size: 0.92rem;
+      font-size: .92rem;
       font-weight: 700;
       border: 1px solid var(--border);
-      transition: transform 0.2s, background 0.2s;
+      transition: transform .2s, background .2s;
     }
 
-    .btn:hover {
-      transform: translateY(-2px);
-    }
+    .btn:hover { transform: translateY(-2px); }
 
     .btn-primary {
       color: #0a1120;
@@ -190,16 +164,14 @@
       border-color: transparent;
     }
 
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.035);
-    }
+    .btn-secondary { background: rgba(255,255,255,.035); }
 
     .profile-card {
       padding: 30px;
       border: 1px solid var(--border);
-      background: linear-gradient(145deg, rgba(21, 31, 50, 0.96), rgba(12, 19, 33, 0.96));
+      background: linear-gradient(145deg, rgba(21,31,50,.96), rgba(12,19,33,.96));
       border-radius: 24px;
-      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 25px 70px rgba(0,0,0,.2);
     }
 
     .avatar {
@@ -216,15 +188,8 @@
       margin-bottom: 20px;
     }
 
-    .profile-card h2 {
-      font-size: 1.4rem;
-      margin-bottom: 6px;
-    }
-
-    .profile-card > p {
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
+    .profile-card h2 { font-size: 1.4rem; margin-bottom: 6px; }
+    .profile-card > p { color: var(--muted); font-size: .9rem; }
 
     .profile-details {
       border-top: 1px solid var(--border);
@@ -238,29 +203,20 @@
       display: flex;
       justify-content: space-between;
       gap: 15px;
-      font-size: 0.87rem;
+      font-size: .87rem;
     }
 
-    .detail span:first-child {
-      color: var(--muted);
-    }
+    .detail span:first-child { color: var(--muted); }
+    .detail span:last-child { text-align: right; }
 
-    .detail span:last-child {
-      text-align: right;
-    }
+    section { padding: 75px 0; }
 
-    section {
-      padding: 75px 0;
-    }
-
-    .section-heading {
-      margin-bottom: 34px;
-    }
+    .section-heading { margin-bottom: 34px; }
 
     .section-label {
       display: block;
       color: var(--accent2);
-      font-size: 0.76rem;
+      font-size: .76rem;
       font-weight: 700;
       letter-spacing: 2px;
       text-transform: uppercase;
@@ -273,32 +229,23 @@
       margin-bottom: 12px;
     }
 
-    .section-heading p {
-      color: var(--muted);
-      max-width: 680px;
-    }
+    .section-heading p { color: var(--muted); max-width: 680px; }
 
     .about-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1.1fr .9fr;
       gap: 25px;
     }
 
     .card {
-      background: rgba(16, 24, 39, 0.85);
+      background: rgba(16,24,39,.85);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 27px;
     }
 
-    .card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 13px;
-    }
-
-    .card p {
-      color: var(--muted);
-    }
+    .card h3 { font-size: 1.2rem; margin-bottom: 13px; }
+    .card p { color: var(--muted); }
 
     .education-item {
       border-left: 2px solid var(--accent);
@@ -306,15 +253,8 @@
       margin-top: 18px;
     }
 
-    .education-item strong {
-      display: block;
-      margin-bottom: 4px;
-    }
-
-    .education-item span {
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
+    .education-item strong { display: block; margin-bottom: 4px; }
+    .education-item span { color: var(--muted); font-size: .9rem; }
 
     .skills-grid {
       display: grid;
@@ -329,25 +269,18 @@
       border-radius: 15px;
     }
 
-    .skill-card h3 {
-      font-size: 1rem;
-      margin-bottom: 15px;
-    }
+    .skill-card h3 { font-size: 1rem; margin-bottom: 15px; }
 
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
 
     .tag {
       display: inline-flex;
       padding: 6px 10px;
-      background: rgba(139, 156, 255, 0.09);
-      border: 1px solid rgba(139, 156, 255, 0.18);
+      background: rgba(139,156,255,.09);
+      border: 1px solid rgba(139,156,255,.18);
       border-radius: 8px;
       color: #d9e0ff;
-      font-size: 0.8rem;
+      font-size: .8rem;
     }
 
     .projects-grid {
@@ -364,12 +297,12 @@
       border-radius: var(--radius);
       background: linear-gradient(145deg, #121c2e, #0d1422);
       border: 1px solid var(--border);
-      transition: transform 0.22s, border-color 0.22s;
+      transition: transform .22s, border-color .22s;
     }
 
     .project-card:hover {
       transform: translateY(-5px);
-      border-color: rgba(139, 156, 255, 0.5);
+      border-color: rgba(139,156,255,.5);
     }
 
     .project-top {
@@ -387,30 +320,14 @@
       place-items: center;
       flex-shrink: 0;
       border-radius: 14px;
-      background: rgba(139, 156, 255, 0.12);
+      background: rgba(139,156,255,.12);
       font-size: 1.45rem;
     }
 
-    .project-number {
-      color: #8594b1;
-      font-size: 0.8rem;
-      letter-spacing: 1px;
-    }
-
-    .project-card h3 {
-      font-size: 1.35rem;
-      margin-bottom: 12px;
-    }
-
-    .project-card > p {
-      color: var(--muted);
-      font-size: 0.94rem;
-      margin-bottom: 20px;
-    }
-
-    .project-card .tags {
-      margin-bottom: 22px;
-    }
+    .project-number { color: #8594b1; font-size: .8rem; letter-spacing: 1px; }
+    .project-card h3 { font-size: 1.35rem; margin-bottom: 12px; }
+    .project-card > p { color: var(--muted); font-size: .94rem; margin-bottom: 20px; }
+    .project-card .tags { margin-bottom: 22px; }
 
     .project-actions {
       display: flex;
@@ -424,23 +341,15 @@
       display: inline-flex;
       align-items: center;
       gap: 7px;
-      font-size: 0.87rem;
+      font-size: .87rem;
       font-weight: 700;
       color: var(--accent2);
     }
 
-    .project-link:hover {
-      text-decoration: underline;
-    }
+    .project-link:hover { text-decoration: underline; }
+    .featured { border-color: rgba(139,156,255,.32); }
 
-    .featured {
-      border-color: rgba(139, 156, 255, 0.32);
-    }
-
-    .experience-list {
-      display: grid;
-      gap: 18px;
-    }
+    .experience-list { display: grid; gap: 18px; }
 
     .experience-item {
       display: grid;
@@ -452,32 +361,11 @@
       background: var(--panel);
     }
 
-    .experience-date {
-      color: var(--accent2);
-      font-size: 0.86rem;
-      font-weight: 600;
-    }
-
-    .experience-item h3 {
-      font-size: 1.15rem;
-      margin-bottom: 5px;
-    }
-
-    .experience-company {
-      color: var(--muted);
-      font-size: 0.9rem;
-      margin-bottom: 12px;
-    }
-
-    .experience-item ul {
-      padding-left: 19px;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    .experience-item li + li {
-      margin-top: 5px;
-    }
+    .experience-date { color: var(--accent2); font-size: .86rem; font-weight: 600; }
+    .experience-item h3 { font-size: 1.15rem; margin-bottom: 5px; }
+    .experience-company { color: var(--muted); font-size: .9rem; margin-bottom: 12px; }
+    .experience-item ul { padding-left: 19px; color: var(--muted); font-size: .92rem; }
+    .experience-item li + li { margin-top: 5px; }
 
     .cert-grid {
       display: grid;
@@ -492,16 +380,8 @@
       border-radius: 13px;
     }
 
-    .cert-item strong {
-      display: block;
-      font-size: 0.96rem;
-      margin-bottom: 5px;
-    }
-
-    .cert-item span {
-      color: var(--muted);
-      font-size: 0.86rem;
-    }
+    .cert-item strong { display: block; font-size: .96rem; margin-bottom: 5px; }
+    .cert-item span { color: var(--muted); font-size: .86rem; }
 
     .contact-box {
       text-align: center;
@@ -509,14 +389,11 @@
       border-radius: 24px;
       border: 1px solid var(--border);
       background:
-        radial-gradient(ellipse at 50% 0%, rgba(139, 156, 255, 0.12), transparent 60%),
+        radial-gradient(ellipse at 50% 0%, rgba(139,156,255,.12), transparent 60%),
         var(--panel);
     }
 
-    .contact-box h2 {
-      font-size: clamp(2rem, 4vw, 2.8rem);
-      margin-bottom: 15px;
-    }
+    .contact-box h2 { font-size: clamp(2rem,4vw,2.8rem); margin-bottom: 15px; }
 
     .contact-box p {
       color: var(--muted);
@@ -524,16 +401,14 @@
       margin: 0 auto 25px;
     }
 
-    .contact-box .button-row {
-      justify-content: center;
-    }
+    .contact-box .button-row { justify-content: center; }
 
     footer {
       border-top: 1px solid var(--border);
       padding: 25px 0;
       margin-top: 40px;
       color: var(--muted);
-      font-size: 0.85rem;
+      font-size: .85rem;
     }
 
     .footer-inner {
@@ -545,92 +420,32 @@
     }
 
     @media (max-width: 850px) {
-      .hero {
-        grid-template-columns: 1fr;
-        padding-top: 70px;
-        gap: 35px;
-      }
-
-      .profile-card {
-        max-width: 520px;
-      }
-
-      .skills-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .experience-item {
-        grid-template-columns: 1fr;
-        gap: 8px;
-      }
+      .hero { grid-template-columns: 1fr; padding-top: 70px; gap: 35px; }
+      .profile-card { max-width: 520px; }
+      .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .about-grid { grid-template-columns: 1fr; }
+      .experience-item { grid-template-columns: 1fr; gap: 8px; }
     }
 
     @media (max-width: 600px) {
-      .container {
-        width: min(100% - 28px, var(--width));
-      }
-
-      .nav-inner {
-        padding: 13px 0;
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .nav-links {
-        width: 100%;
-        gap: 17px;
-        overflow-x: auto;
-        white-space: nowrap;
-        padding-bottom: 3px;
-        font-size: 0.82rem;
-      }
-
-      .hero {
-        padding: 55px 0 45px;
-      }
-
-      h1 {
-        font-size: 3.15rem;
-        letter-spacing: -2px;
-      }
-
-      section {
-        padding: 52px 0;
-      }
-
-      .projects-grid,
-      .cert-grid,
-      .skills-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .card,
-      .project-card {
-        padding: 22px;
-      }
-
-      .detail {
-        font-size: 0.82rem;
-      }
-
-      .contact-box {
-        padding: 35px 18px;
-      }
+      .container { width: min(100% - 28px, var(--width)); }
+      .nav-inner { padding: 13px 0; align-items: flex-start; flex-direction: column; gap: 10px; }
+      .nav-links { width: 100%; gap: 17px; overflow-x: auto; white-space: nowrap; padding-bottom: 3px; font-size: .82rem; }
+      .hero { padding: 55px 0 45px; }
+      h1 { font-size: 3.15rem; letter-spacing: -2px; }
+      section { padding: 52px 0; }
+      .projects-grid, .cert-grid, .skills-grid { grid-template-columns: 1fr; }
+      .card, .project-card { padding: 22px; }
+      .detail { font-size: .82rem; }
+      .contact-box { padding: 35px 18px; }
     }
   </style>
 </head>
 
 <body>
-
   <header class="navbar">
     <div class="container nav-inner">
       <a class="brand" href="#home">Puja<span>.</span></a>
-
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
@@ -645,22 +460,13 @@
   <main>
     <div class="container hero" id="home">
       <div>
-        <div class="eyebrow">
-          <span class="status-dot"></span>
-          Software Developer Portfolio
-        </div>
-
-        <h1>
-          Hi, I'm Puja.<br>
-          I build <span class="gradient-text">digital solutions.</span>
-        </h1>
-
+        <div class="eyebrow"><span class="status-dot"></span> Software Developer Portfolio</div>
+        <h1>Hi, I'm Puja.<br>I build <span class="gradient-text">digital solutions.</span></h1>
         <p class="hero-description">
-          I'm a BCA graduate interested in software development, AI-powered
-          applications, web technologies, and data analytics. I enjoy turning
-          ideas into practical projects and continuously improving my technical skills.
+          I'm a software developer interested in software engineering,
+          AI-powered applications, web technologies, and data analytics.
+          I enjoy turning ideas into practical projects and solving problems through code.
         </p>
-
         <div class="button-row">
           <a class="btn btn-primary" href="#projects">Explore My Projects ↘</a>
           <a class="btn btn-secondary" href="mailto:poojadixit74629@gmail.com">Contact Me ↗</a>
@@ -671,20 +477,10 @@
         <div class="avatar">PK</div>
         <h2>Puja Kumari</h2>
         <p>Software Developer · Bengaluru, India</p>
-
         <div class="profile-details">
-          <div class="detail">
-            <span>Education</span>
-            <span>BCA</span>
-          </div>
-          <div class="detail">
-            <span>Focus</span>
-            <span>Software & AI</span>
-          </div>
-          <div class="detail">
-            <span>Projects</span>
-            <span>4 featured</span>
-          </div>
+          <div class="detail"><span>Education</span><span>BCA</span></div>
+          <div class="detail"><span>Focus</span><span>Software & AI</span></div>
+          <div class="detail"><span>Projects</span><span>4 featured</span></div>
           <div class="detail">
             <span>GitHub</span>
             <a href="https://github.com/Puja-hubb" target="_blank" rel="noopener noreferrer">Puja-hubb ↗</a>
@@ -705,16 +501,24 @@
           <article class="card">
             <h3>Who I Am</h3>
             <p>
-              I'm Puja Kumari, a software developer with a background in
-              computer applications and hands-on experience with programming,
-              web development, and data-focused projects. My portfolio brings
-              together projects that demonstrate my learning, problem-solving,
-              and technical interests.
+              I'm a BCA graduate from Sharda University with a strong interest
+              in software engineering, AI-powered applications, and building
+              technology that solves real-world problems.
             </p>
             <br>
             <p>
-              I'm interested in opportunities where I can contribute to real
-              software projects, learn from experienced teams, and grow as a developer.
+              Through hands-on projects, internships, and technical experience,
+              I've developed practical skills in Python programming, web
+              development, API integration, and database management. I enjoy
+              exploring how technology works, solving problems through code,
+              and turning ideas into functional applications.
+            </p>
+            <br>
+            <p>
+              I'm always looking for opportunities to take on meaningful
+              challenges, learn from experienced professionals, and contribute
+              to building reliable, user-focused software. My goal is to keep
+              growing as a developer while creating solutions that make a real difference.
             </p>
           </article>
 
@@ -746,10 +550,8 @@
           <article class="skill-card">
             <h3>Programming Languages</h3>
             <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">Java</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">TypeScript</span>
+              <span class="tag">Python</span><span class="tag">Java</span>
+              <span class="tag">JavaScript</span><span class="tag">TypeScript</span>
               <span class="tag">SQL</span>
             </div>
           </article>
@@ -757,20 +559,16 @@
           <article class="skill-card">
             <h3>Web Development</h3>
             <div class="tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">React</span>
-              <span class="tag">Node.js</span>
-              <span class="tag">Express</span>
-              <span class="tag">REST APIs</span>
+              <span class="tag">HTML</span><span class="tag">CSS</span>
+              <span class="tag">React</span><span class="tag">Node.js</span>
+              <span class="tag">Express</span><span class="tag">REST APIs</span>
             </div>
           </article>
 
           <article class="skill-card">
             <h3>Data & Analytics</h3>
             <div class="tags">
-              <span class="tag">Pandas</span>
-              <span class="tag">NumPy</span>
+              <span class="tag">Pandas</span><span class="tag">NumPy</span>
               <span class="tag">Oracle Analytics Cloud</span>
               <span class="tag">Data Visualization</span>
             </div>
@@ -779,8 +577,7 @@
           <article class="skill-card">
             <h3>Databases</h3>
             <div class="tags">
-              <span class="tag">MySQL</span>
-              <span class="tag">SQL</span>
+              <span class="tag">MySQL</span><span class="tag">SQL</span>
               <span class="tag">Database Concepts</span>
             </div>
           </article>
@@ -788,20 +585,16 @@
           <article class="skill-card">
             <h3>Tools & Platforms</h3>
             <div class="tags">
-              <span class="tag">Git</span>
-              <span class="tag">GitHub</span>
-              <span class="tag">AWS</span>
-              <span class="tag">Oracle Analytics Cloud</span>
+              <span class="tag">Git</span><span class="tag">GitHub</span>
+              <span class="tag">AWS</span><span class="tag">Oracle Analytics Cloud</span>
             </div>
           </article>
 
           <article class="skill-card">
             <h3>Core Concepts</h3>
             <div class="tags">
-              <span class="tag">Data Structures</span>
-              <span class="tag">Debugging</span>
-              <span class="tag">Testing</span>
-              <span class="tag">Operating Systems</span>
+              <span class="tag">Data Structures</span><span class="tag">Debugging</span>
+              <span class="tag">Testing</span><span class="tag">Operating Systems</span>
               <span class="tag">Problem Solving</span>
             </div>
           </article>
@@ -821,73 +614,49 @@
         </div>
 
         <div class="projects-grid">
-
-          <!-- PROJECT 1: DATAGUARD AI -->
           <article class="project-card featured">
             <div class="project-top">
-              <div class="project-icon">◈</div>
-              <span class="project-number">PROJECT 01</span>
+              <div class="project-icon">◈</div><span class="project-number">PROJECT 01</span>
             </div>
-
             <h3>DataGuard AI</h3>
             <p>
-              A data reliability dashboard concept for monitoring data quality
-              and investigating unusual revenue patterns. Designed to make
+              A data reliability dashboard for monitoring data quality and
+              investigating unusual revenue patterns. Designed to make
               potential data issues and analytical signals easier to explore.
             </p>
-
             <div class="tags">
-              <span class="tag">Data Analytics</span>
-              <span class="tag">Data Quality</span>
-              <span class="tag">Dashboard</span>
-              <span class="tag">Anomaly Investigation</span>
+              <span class="tag">Data Analytics</span><span class="tag">Data Quality</span>
+              <span class="tag">Dashboard</span><span class="tag">Anomaly Investigation</span>
             </div>
-
             <div class="project-actions">
-              <a class="project-link"
-                 href="https://github.com/Puja-hubb"
-                 target="_blank" rel="noopener noreferrer">
-                Explore on GitHub ↗
-              </a>
+              <a class="project-link" href="https://github.com/Puja-hubb" target="_blank" rel="noopener noreferrer">Explore on GitHub ↗</a>
             </div>
           </article>
 
-          <!-- PROJECT 2: SENTINEL AI CODE INTELLIGENCE -->
           <article class="project-card featured">
             <div class="project-top">
-              <div class="project-icon">⌘</div>
-              <span class="project-number">PROJECT 02</span>
+              <div class="project-icon">⌘</div><span class="project-number">PROJECT 02</span>
             </div>
-
             <h3>Sentinel AI Code Intelligence</h3>
             <p>
               An AI-focused code intelligence project exploring ways to help
               developers understand and analyze source code. Visit the
-              repository for the implementation and project details.
+              repository for implementation details.
             </p>
-
             <div class="tags">
               <span class="tag">Artificial Intelligence</span>
               <span class="tag">Code Intelligence</span>
               <span class="tag">Software Development</span>
             </div>
-
             <div class="project-actions">
-              <a class="project-link"
-                 href="https://github.com/Puja-hubb/sentinel-ai-code-intelligence"
-                 target="_blank" rel="noopener noreferrer">
-                View GitHub Repository ↗
-              </a>
+              <a class="project-link" href="https://github.com/Puja-hubb/sentinel-ai-code-intelligence" target="_blank" rel="noopener noreferrer">View GitHub Repository ↗</a>
             </div>
           </article>
 
-          <!-- PROJECT 3: PREPTRACK -->
           <article class="project-card">
             <div class="project-top">
-              <div class="project-icon">◎</div>
-              <span class="project-number">PROJECT 03</span>
+              <div class="project-icon">◎</div><span class="project-number">PROJECT 03</span>
             </div>
-
             <h3>PrepTrack</h3>
             <p>
               A placement preparation analyzer that organizes student
@@ -895,55 +664,35 @@
               logic to help identify areas requiring attention. The project
               includes automated tests for its implemented functionality.
             </p>
-
             <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">Validation</span>
-              <span class="tag">Priority Logic</span>
-              <span class="tag">Testing</span>
+              <span class="tag">Python</span><span class="tag">Validation</span>
+              <span class="tag">Priority Logic</span><span class="tag">Testing</span>
             </div>
-
             <div class="project-actions">
-              <a class="project-link"
-                 href="https://github.com/Puja-hubb/Project1"
-                 target="_blank" rel="noopener noreferrer">
-                View GitHub Repository ↗
-              </a>
+              <a class="project-link" href="https://github.com/Puja-hubb/Project1" target="_blank" rel="noopener noreferrer">View GitHub Repository ↗</a>
             </div>
           </article>
 
-          <!-- PROJECT 4: EXPENSE TRACKER -->
           <article class="project-card">
             <div class="project-top">
-              <div class="project-icon">▤</div>
-              <span class="project-number">PROJECT 04</span>
+              <div class="project-icon">▤</div><span class="project-number">PROJECT 04</span>
             </div>
-
             <h3>Expense Tracker Web Application</h3>
             <p>
               A responsive expense tracking interface for organizing spending
-              and reviewing financial activity. Project features include
-              categorized expenses, dashboard charts, monthly budget alerts,
-              and bill reminders using browser local storage.
+              and reviewing financial activity. Features include categorized
+              expenses, dashboard charts, monthly budget alerts, and bill
+              reminders using browser local storage.
             </p>
-
             <div class="tags">
-              <span class="tag">React</span>
-              <span class="tag">TypeScript</span>
-              <span class="tag">Tailwind CSS</span>
-              <span class="tag">Recharts</span>
+              <span class="tag">React</span><span class="tag">TypeScript</span>
+              <span class="tag">Tailwind CSS</span><span class="tag">Recharts</span>
               <span class="tag">Local Storage</span>
             </div>
-
             <div class="project-actions">
-              <a class="project-link"
-                 href="https://github.com/Puja-hubb"
-                 target="_blank" rel="noopener noreferrer">
-                Explore on GitHub ↗
-              </a>
+              <a class="project-link" href="https://github.com/Puja-hubb" target="_blank" rel="noopener noreferrer">Explore on GitHub ↗</a>
             </div>
           </article>
-
         </div>
       </div>
     </section>
@@ -993,40 +742,13 @@
         </div>
 
         <div class="cert-grid">
-          <article class="cert-item">
-            <strong>AWS Cloud Practitioner</strong>
-            <span>Amazon Web Services</span>
-          </article>
-
-          <article class="cert-item">
-            <strong>Oracle Analytics Cloud 2025 Certified Professional</strong>
-            <span>Oracle</span>
-          </article>
-
-          <article class="cert-item">
-            <strong>Advanced Software Engineering Job Simulation</strong>
-            <span>Walmart USA · Forage</span>
-          </article>
-
-          <article class="cert-item">
-            <strong>Data Analysis with Python</strong>
-            <span>IBM · Cognitive Class</span>
-          </article>
-
-          <article class="cert-item">
-            <strong>Data Analytics with Generative AI</strong>
-            <span>Simplilearn SkillUP</span>
-          </article>
-
-          <article class="cert-item">
-            <strong>Data Visualisation</strong>
-            <span>Tata · Forage</span>
-          </article>
-
-          <article class="cert-item">
-            <strong>Full Stack Java Development</strong>
-            <span>Course Certificate</span>
-          </article>
+          <article class="cert-item"><strong>AWS Cloud Practitioner</strong><span>Amazon Web Services</span></article>
+          <article class="cert-item"><strong>Oracle Analytics Cloud 2025 Certified Professional</strong><span>Oracle</span></article>
+          <article class="cert-item"><strong>Advanced Software Engineering Job Simulation</strong><span>Walmart USA · Forage</span></article>
+          <article class="cert-item"><strong>Data Analysis with Python</strong><span>IBM · Cognitive Class</span></article>
+          <article class="cert-item"><strong>Data Analytics with Generative AI</strong><span>Simplilearn SkillUP</span></article>
+          <article class="cert-item"><strong>Data Visualisation</strong><span>Tata · Forage</span></article>
+          <article class="cert-item"><strong>Full Stack Java Development</strong><span>Course Certificate</span></article>
         </div>
       </div>
     </section>
@@ -1041,24 +763,10 @@
             apply my skills, contribute to projects, and continue learning.
             Feel free to reach out.
           </p>
-
           <div class="button-row">
-            <a class="btn btn-primary"
-               href="mailto:poojadixit74629@gmail.com">
-              Email Me ↗
-            </a>
-
-            <a class="btn btn-secondary"
-               href="https://www.linkedin.com/in/puja-kumari-296221304"
-               target="_blank" rel="noopener noreferrer">
-              LinkedIn ↗
-            </a>
-
-            <a class="btn btn-secondary"
-               href="https://github.com/Puja-hubb"
-               target="_blank" rel="noopener noreferrer">
-              GitHub ↗
-            </a>
+            <a class="btn btn-primary" href="mailto:poojadixit74629@gmail.com">Email Me ↗</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/puja-kumari-296221304" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <a class="btn btn-secondary" href="https://github.com/Puja-hubb" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
           </div>
         </div>
       </div>
@@ -1073,9 +781,7 @@
   </footer>
 
   <script>
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-
 </body>
 </html>
