@@ -4,26 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#080d19">
-  <meta name="description" content="Puja Kumari's software development portfolio featuring AI-focused projects, web applications, Python programming, and data analytics.">
-  <title>Puja Kumari | Software Developer</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#080812">
+  <meta name="description" content="Portfolio of a software developer building AI-powered applications, analytics dashboards, and reliable software.">
+  <title>Puja | Software Developer & AI Enthusiast</title>
 
   <style>
     :root {
-      --bg: #080d19;
-      --panel: #101827;
-      --panel-light: #151f32;
-      --text: #f4f7ff;
-      --muted: #a1aec4;
-      --accent: #8b9cff;
-      --accent2: #62e4c5;
-      --border: rgba(174, 190, 220, .15);
-      --radius: 18px;
-      --width: 1120px;
+      --bg: #080812;
+      --surface: #101020;
+      --surface-2: #15152a;
+      --text: #f5f4ff;
+      --muted: #aaa9c5;
+      --purple: #a78bfa;
+      --blue: #60a5fa;
+      --border: rgba(167,139,250,.19);
+      --gradient: linear-gradient(120deg,#a78bfa,#60a5fa,#c084fc);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -34,10 +29,11 @@
     }
 
     body {
-      font-family: "DM Sans", sans-serif;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+        BlinkMacSystemFont, "Segoe UI", sans-serif;
       background:
-        radial-gradient(ellipse at 15% 0%, rgba(94,110,220,.13), transparent 38%),
-        radial-gradient(ellipse at 90% 35%, rgba(55,190,168,.07), transparent 32%),
+        radial-gradient(ellipse at 12% 8%,rgba(100,60,200,.14),transparent 36%),
+        radial-gradient(ellipse at 88% 35%,rgba(40,100,220,.10),transparent 32%),
         var(--bg);
       color: var(--text);
       line-height: 1.7;
@@ -45,20 +41,60 @@
     }
 
     a { color: inherit; text-decoration: none; }
-    a:focus-visible { outline: 2px solid var(--accent2); outline-offset: 4px; }
+    img { display: block; max-width: 100%; }
 
-    .container {
-      width: min(var(--width), calc(100% - 40px));
-      margin: 0 auto;
+    .container { width: min(1120px,91%); margin-inline: auto; }
+
+    .gradient-text {
+      color: var(--purple);
+      background: var(--gradient);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
+    .section { padding: 90px 0; }
+
+    .section-heading {
+      font-size: clamp(1.9rem,4vw,2.7rem);
+      line-height: 1.2;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 650px;
+      margin-bottom: 36px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: #c4b5fd;
+      font-size: .83rem;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      height: 2px;
+      width: 25px;
+      background: var(--gradient);
+    }
+
+    /* Navigation */
     .navbar {
       position: sticky;
       top: 0;
-      z-index: 10;
-      background: rgba(8,13,25,.88);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(16px);
+      z-index: 50;
+      background: rgba(8,8,18,.82);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255,255,255,.07);
     }
 
     .nav-inner {
@@ -70,705 +106,725 @@
     }
 
     .brand {
-      font-family: "Space Grotesk", sans-serif;
-      font-size: 1.25rem;
-      font-weight: 700;
-      white-space: nowrap;
+      font-size: 1.3rem;
+      font-weight: 850;
+      letter-spacing: -.7px;
     }
 
-    .brand span { color: var(--accent); }
+    .brand span { color: var(--purple); }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 24px;
-      color: var(--muted);
+      gap: 25px;
+      list-style: none;
+      color: #d4d2e8;
       font-size: .9rem;
     }
 
-    .nav-links a:hover { color: var(--text); }
+    .nav-links a:hover { color: var(--blue); }
 
-    .hero {
-      padding: 100px 0 80px;
-      display: grid;
-      grid-template-columns: 1.5fr .8fr;
-      align-items: center;
-      gap: 55px;
+    .nav-cta {
+      border: 1px solid var(--border);
+      padding: 8px 15px;
+      border-radius: 10px;
     }
 
-    .eyebrow {
+    /* Hero */
+    .hero {
+      min-height: 680px;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      align-items: center;
+      gap: 65px;
+      padding-top: 70px;
+      padding-bottom: 80px;
+    }
+
+    .availability {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      color: var(--accent2);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: .76rem;
-      font-weight: 700;
-      margin-bottom: 22px;
+      gap: 9px;
+      padding: 7px 12px;
+      border: 1px solid rgba(74,222,128,.23);
+      background: rgba(74,222,128,.055);
+      border-radius: 99px;
+      color: #bbf7d0;
+      font-size: .82rem;
+      margin-bottom: 25px;
     }
 
     .status-dot {
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: var(--accent2);
-      box-shadow: 0 0 12px rgba(98,228,197,.5);
+      background: #4ade80;
+      box-shadow: 0 0 12px #4ade80;
     }
 
-    h1, h2, h3 {
-      font-family: "Space Grotesk", sans-serif;
-      line-height: 1.2;
-    }
-
-    h1 {
-      font-size: clamp(2.8rem, 6vw, 5rem);
-      letter-spacing: -3px;
-      margin-bottom: 22px;
-    }
-
-    .gradient-text {
-      background: linear-gradient(110deg, var(--accent), var(--accent2));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .hero-description {
-      max-width: 640px;
-      font-size: 1.08rem;
-      color: var(--muted);
-      margin-bottom: 30px;
-    }
-
-    .button-row { display: flex; flex-wrap: wrap; gap: 12px; }
-
-    .btn {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      gap: 9px;
-      padding: 12px 19px;
-      border-radius: 10px;
-      font-size: .92rem;
-      font-weight: 700;
-      border: 1px solid var(--border);
-      transition: transform .2s, background .2s;
-    }
-
-    .btn:hover { transform: translateY(-2px); }
-
-    .btn-primary {
-      color: #0a1120;
-      background: linear-gradient(110deg, var(--accent), var(--accent2));
-      border-color: transparent;
-    }
-
-    .btn-secondary { background: rgba(255,255,255,.035); }
-
-    .profile-card {
-      padding: 30px;
-      border: 1px solid var(--border);
-      background: linear-gradient(145deg, rgba(21,31,50,.96), rgba(12,19,33,.96));
-      border-radius: 24px;
-      box-shadow: 0 25px 70px rgba(0,0,0,.2);
-    }
-
-    .avatar {
-      width: 82px;
-      height: 82px;
-      display: grid;
-      place-items: center;
-      border-radius: 22px;
-      background: linear-gradient(140deg, #899aff, #5ee0c4);
-      color: #0a1120;
-      font-family: "Space Grotesk", sans-serif;
-      font-size: 2rem;
-      font-weight: 700;
+    .hero h1 {
+      font-size: clamp(3rem,6.7vw,5.4rem);
+      line-height: 1.04;
+      letter-spacing: -3.5px;
       margin-bottom: 20px;
     }
 
-    .profile-card h2 { font-size: 1.4rem; margin-bottom: 6px; }
-    .profile-card > p { color: var(--muted); font-size: .9rem; }
-
-    .profile-details {
-      border-top: 1px solid var(--border);
-      margin-top: 22px;
-      padding-top: 18px;
-      display: grid;
-      gap: 13px;
+    .hero h2 {
+      font-size: clamp(1.2rem,2.5vw,1.65rem);
+      color: #d5d1f0;
+      font-weight: 550;
+      margin-bottom: 17px;
     }
 
-    .detail {
-      display: flex;
-      justify-content: space-between;
-      gap: 15px;
-      font-size: .87rem;
+    .hero-description {
+      max-width: 590px;
+      color: var(--muted);
+      font-size: 1.03rem;
+      margin-bottom: 30px;
     }
 
-    .detail span:first-child { color: var(--muted); }
-    .detail span:last-child { text-align: right; }
+    .button-row { display: flex; gap: 13px; flex-wrap: wrap; }
 
-    section { padding: 75px 0; }
-
-    .section-heading { margin-bottom: 34px; }
-
-    .section-label {
-      display: block;
-      color: var(--accent2);
-      font-size: .76rem;
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 12px 19px;
+      border-radius: 11px;
+      font-size: .92rem;
       font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 10px;
+      transition: transform .25s, box-shadow .25s, border-color .25s;
     }
 
-    .section-heading h2 {
-      font-size: clamp(2rem, 4vw, 2.8rem);
-      letter-spacing: -1px;
-      margin-bottom: 12px;
+    .button:hover { transform: translateY(-3px); }
+
+    .button-primary {
+      background: var(--gradient);
+      color: #0a0815;
+      box-shadow: 0 5px 25px rgba(139,92,246,.2);
     }
 
-    .section-heading p { color: var(--muted); max-width: 680px; }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 25px;
-    }
-
-    .card {
-      background: rgba(16,24,39,.85);
+    .button-secondary {
       border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 27px;
+      background: rgba(255,255,255,.025);
     }
 
-    .card h3 { font-size: 1.2rem; margin-bottom: 13px; }
-    .card p { color: var(--muted); }
-
-    .education-item {
-      border-left: 2px solid var(--accent);
-      padding-left: 17px;
-      margin-top: 18px;
+    .button-secondary:hover {
+      border-color: var(--purple);
+      box-shadow: 0 0 22px rgba(167,139,250,.12);
     }
 
-    .education-item strong { display: block; margin-bottom: 4px; }
-    .education-item span { color: var(--muted); font-size: .9rem; }
+    .social-links {
+      display: flex;
+      gap: 22px;
+      margin-top: 27px;
+      color: #c5c3df;
+      font-size: .9rem;
+    }
 
+    .social-links a:hover { color: var(--blue); }
+
+    /* Profile photo */
+    .profile-stage {
+      position: relative;
+      width: min(100%,365px);
+      margin: 0 auto;
+      animation: float 5s ease-in-out infinite;
+    }
+
+    .profile-halo {
+      position: absolute;
+      inset: -20px;
+      border-radius: 48%;
+      background: conic-gradient(from 0deg,#a78bfa,#60a5fa,#d8b4fe,#a78bfa);
+      filter: blur(38px);
+      opacity: .36;
+      animation: halo 8s linear infinite;
+    }
+
+    .profile-frame {
+      position: relative;
+      padding: 5px;
+      border-radius: 46% 46% 28px 28px;
+      background: linear-gradient(140deg,#c4b5fd,#60a5fa,#7c3aed,#c084fc);
+      box-shadow: 0 0 35px rgba(139,92,246,.25);
+    }
+
+    .profile-frame img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      object-position: center 25%;
+      border-radius: 46% 46% 24px 24px;
+      background: #18152a;
+    }
+
+    .photo-caption {
+      position: absolute;
+      bottom: 20px;
+      left: -30px;
+      padding: 12px 16px;
+      background: rgba(17,16,34,.93);
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      box-shadow: 0 10px 35px rgba(0,0,0,.3);
+      font-size: .85rem;
+      backdrop-filter: blur(12px);
+    }
+
+    .photo-caption strong { display: block; color: #e9ddff; }
+    .photo-caption span { color: var(--muted); font-size: .77rem; }
+
+    /* Small highlights */
+    .quick-stats {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 14px;
+      margin-top: 55px;
+    }
+
+    .stat {
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: rgba(17,16,34,.7);
+    }
+
+    .stat strong { display: block; font-size: 1.45rem; }
+    .stat span { color: var(--muted); font-size: .85rem; }
+
+    /* Shared cards */
+    .panel, .project-card, .skill-card, .timeline-card, .certificate-card {
+      background: linear-gradient(145deg,rgba(21,21,42,.94),rgba(12,12,26,.95));
+      border: 1px solid var(--border);
+      border-radius: 18px;
+    }
+
+    .panel { padding: 30px; }
+
+    .panel p { color: var(--muted); margin-top: 13px; }
+
+    /* Skills */
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3,1fr);
       gap: 18px;
     }
 
-    .skill-card {
-      padding: 23px;
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 15px;
-    }
+    .skill-card { padding: 23px; transition: transform .25s,border-color .25s; }
+    .skill-card:hover { transform: translateY(-5px); border-color: #8170d9; }
 
-    .skill-card h3 { font-size: 1rem; margin-bottom: 15px; }
+    .skill-icon { font-size: 1.6rem; margin-bottom: 12px; }
+    .skill-card h3 { margin-bottom: 12px; font-size: 1.04rem; }
+    .skill-card p { color: var(--muted); font-size: .9rem; }
 
-    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
 
     .tag {
-      display: inline-flex;
-      padding: 6px 10px;
-      background: rgba(139,156,255,.09);
-      border: 1px solid rgba(139,156,255,.18);
-      border-radius: 8px;
-      color: #d9e0ff;
-      font-size: .8rem;
+      font-size: .77rem;
+      color: #d8d4f7;
+      background: rgba(167,139,250,.09);
+      border: 1px solid rgba(167,139,250,.15);
+      padding: 5px 9px;
+      border-radius: 7px;
     }
 
+    /* Projects */
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
+      grid-template-columns: repeat(2,minmax(0,1fr));
+      gap: 24px;
     }
 
     .project-card {
+      overflow: hidden;
       display: flex;
       flex-direction: column;
       min-width: 0;
-      padding: 27px;
-      border-radius: var(--radius);
-      background: linear-gradient(145deg, #121c2e, #0d1422);
-      border: 1px solid var(--border);
-      transition: transform .22s, border-color .22s;
+      transition: transform .3s,border-color .3s,box-shadow .3s;
     }
 
     .project-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(139,156,255,.5);
+      transform: translateY(-6px);
+      border-color: rgba(167,139,250,.65);
+      box-shadow: 0 15px 45px rgba(60,40,130,.16);
     }
 
-    .project-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 15px;
-      margin-bottom: 18px;
+    .project-image {
+      position: relative;
+      height: 255px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 70% 25%,rgba(96,165,250,.2),transparent 40%),
+        #111122;
+      border-bottom: 1px solid var(--border);
     }
 
-    .project-icon {
-      width: 49px;
-      height: 49px;
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform .5s;
+    }
+
+    .project-card:hover .project-image img { transform: scale(1.035); }
+
+    .project-image-placeholder {
+      height: 100%;
       display: grid;
-      place-items: center;
-      flex-shrink: 0;
-      border-radius: 14px;
-      background: rgba(139,156,255,.12);
-      font-size: 1.45rem;
-    }
-
-    .project-number { color: #8594b1; font-size: .8rem; letter-spacing: 1px; }
-    .project-card h3 { font-size: 1.35rem; margin-bottom: 12px; }
-    .project-card > p { color: var(--muted); font-size: .94rem; margin-bottom: 20px; }
-    .project-card .tags { margin-bottom: 22px; }
-
-    .project-actions {
-      display: flex;
-      flex-wrap: wrap;
+      place-content: center;
+      text-align: center;
       gap: 10px;
-      margin-top: auto;
-      padding-top: 3px;
-    }
-
-    .project-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      font-size: .87rem;
-      font-weight: 700;
-      color: var(--accent2);
-    }
-
-    .project-link:hover { text-decoration: underline; }
-    .featured { border-color: rgba(139,156,255,.32); }
-
-    .experience-list { display: grid; gap: 18px; }
-
-    .experience-item {
-      display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 25px;
       padding: 25px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: var(--panel);
     }
 
-    .experience-date { color: var(--accent2); font-size: .86rem; font-weight: 600; }
-    .experience-item h3 { font-size: 1.15rem; margin-bottom: 5px; }
-    .experience-company { color: var(--muted); font-size: .9rem; margin-bottom: 12px; }
-    .experience-item ul { padding-left: 19px; color: var(--muted); font-size: .92rem; }
-    .experience-item li + li { margin-top: 5px; }
+    .project-image-placeholder .symbol { font-size: 2.5rem; }
+    .project-image-placeholder p { color: var(--muted); font-size: .84rem; }
+
+    .project-content {
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .project-number {
+      color: #a99af6;
+      font-size: .78rem;
+      font-weight: 750;
+      letter-spacing: 1.5px;
+    }
+
+    .project-content h3 { font-size: 1.3rem; margin: 7px 0 10px; }
+    .project-content > p { color: var(--muted); font-size: .92rem; }
+
+    .project-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: auto; padding-top: 22px; }
+    .project-actions .button { padding: 9px 12px; font-size: .83rem; }
+
+    /* Experience and education */
+    .timeline { display: grid; gap: 17px; }
+
+    .timeline-card { padding: 25px; position: relative; }
+
+    .timeline-card h3 { font-size: 1.1rem; }
+    .timeline-card .meta { color: #b9a9ff; font-size: .88rem; margin: 4px 0 12px; }
+    .timeline-card p, .timeline-card li { color: var(--muted); font-size: .92rem; }
+    .timeline-card ul { padding-left: 20px; margin-top: 9px; }
 
     .cert-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
+      grid-template-columns: repeat(2,minmax(0,1fr));
+      gap: 15px;
     }
 
-    .cert-item {
-      padding: 19px;
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 13px;
-    }
+    .certificate-card { padding: 19px; display: flex; gap: 13px; }
+    .certificate-icon { font-size: 1.45rem; }
+    .certificate-card h3 { font-size: .96rem; }
+    .certificate-card p { color: var(--muted); font-size: .83rem; margin-top: 4px; }
 
-    .cert-item strong { display: block; font-size: .96rem; margin-bottom: 5px; }
-    .cert-item span { color: var(--muted); font-size: .86rem; }
-
-    .contact-box {
+    /* Contact */
+    .contact-panel {
       text-align: center;
-      padding: 48px 25px;
-      border-radius: 24px;
-      border: 1px solid var(--border);
+      padding: 55px 30px;
       background:
-        radial-gradient(ellipse at 50% 0%, rgba(139,156,255,.12), transparent 60%),
-        var(--panel);
+        radial-gradient(ellipse at top,rgba(124,58,237,.2),transparent 65%),
+        var(--surface);
     }
 
-    .contact-box h2 { font-size: clamp(2rem,4vw,2.8rem); margin-bottom: 15px; }
+    .contact-panel .section-intro { margin: 15px auto 26px; }
 
-    .contact-box p {
-      color: var(--muted);
-      max-width: 600px;
-      margin: 0 auto 25px;
+    .contact-email {
+      display: inline-block;
+      color: #c4b5fd;
+      margin-top: 20px;
+      overflow-wrap: anywhere;
     }
-
-    .contact-box .button-row { justify-content: center; }
 
     footer {
-      border-top: 1px solid var(--border);
-      padding: 25px 0;
-      margin-top: 40px;
+      border-top: 1px solid rgba(255,255,255,.07);
       color: var(--muted);
-      font-size: .85rem;
+      padding: 25px 0;
+      font-size: .84rem;
     }
 
     .footer-inner {
       display: flex;
       justify-content: space-between;
-      align-items: center;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 10px;
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .65s ease,transform .65s ease;
+    }
+
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    @keyframes halo {
+      to { transform: rotate(360deg); }
     }
 
     @media (max-width: 850px) {
-      .hero { grid-template-columns: 1fr; padding-top: 70px; gap: 35px; }
-      .profile-card { max-width: 520px; }
-      .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .about-grid { grid-template-columns: 1fr; }
-      .experience-item { grid-template-columns: 1fr; gap: 8px; }
+      .hero { grid-template-columns: 1fr; gap: 55px; text-align: center; padding-top: 65px; }
+      .hero-description { margin-inline: auto; }
+      .button-row,.social-links { justify-content: center; }
+      .profile-stage { width: min(80%,330px); }
+      .profile-frame img { height: 390px; }
+      .quick-stats { text-align: left; }
+      .skills-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .nav-links { gap: 14px; }
+      .nav-links .nav-optional { display: none; }
     }
 
     @media (max-width: 600px) {
-      .container { width: min(100% - 28px, var(--width)); }
-      .nav-inner { padding: 13px 0; align-items: flex-start; flex-direction: column; gap: 10px; }
-      .nav-links { width: 100%; gap: 17px; overflow-x: auto; white-space: nowrap; padding-bottom: 3px; font-size: .82rem; }
-      .hero { padding: 55px 0 45px; }
-      h1 { font-size: 3.15rem; letter-spacing: -2px; }
-      section { padding: 52px 0; }
-      .projects-grid, .cert-grid, .skills-grid { grid-template-columns: 1fr; }
-      .card, .project-card { padding: 22px; }
-      .detail { font-size: .82rem; }
-      .contact-box { padding: 35px 18px; }
+      .section { padding: 65px 0; }
+      .nav-inner { min-height: 64px; }
+      .nav-links { gap: 12px; font-size: .8rem; }
+      .nav-links .nav-optional { display: none; }
+      .brand { font-size: 1.1rem; }
+      .nav-cta { padding: 6px 9px; }
+      .hero h1 { letter-spacing: -2px; }
+      .skills-grid,.projects-grid,.cert-grid { grid-template-columns: 1fr; }
+      .quick-stats { gap: 8px; }
+      .stat { padding: 13px 10px; }
+      .stat strong { font-size: 1.1rem; }
+      .stat span { font-size: .75rem; }
+      .project-image { height: 215px; }
+      .photo-caption { left: -10px; }
+      .panel { padding: 22px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,*::before,*::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
     }
   </style>
 </head>
 
 <body>
   <header class="navbar">
-    <div class="container nav-inner">
-      <a class="brand" href="#home">Puja<span>.</span></a>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+    <nav class="container nav-inner" aria-label="Main navigation">
+      <a class="brand" href="#home">PUJA<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li class="nav-optional"><a href="#experience">Experience</a></li>
+        <li><a class="nav-cta" href="#contact">Contact ↗</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <div class="container hero" id="home">
-      <div>
-        <div class="eyebrow"><span class="status-dot"></span> Software Developer Portfolio</div>
-        <h1>Hi, I'm Puja.<br>I build <span class="gradient-text">digital solutions.</span></h1>
+    <section class="container hero" id="home">
+      <div class="hero-copy">
+        <div class="availability"><span class="status-dot"></span> Software development portfolio</div>
+        <p class="eyebrow">Hello, I'm</p>
+        <h1>Puja <span class="gradient-text">Kumari</span></h1>
+        <h2>Software Developer · AI Enthusiast</h2>
         <p class="hero-description">
-          I'm a software developer interested in software engineering,
-          AI-powered applications, web technologies, and data analytics.
-          I enjoy turning ideas into practical projects and solving problems through code.
+          A BCA graduate who enjoys building useful software, AI-powered
+          applications, analytics dashboards, and user-friendly digital
+          experiences. I love turning ideas into working projects and
+          continuously expanding my technical skills.
         </p>
+
         <div class="button-row">
-          <a class="btn btn-primary" href="#projects">Explore My Projects ↘</a>
-          <a class="btn btn-secondary" href="mailto:poojadixit74629@gmail.com">Contact Me ↗</a>
+          <a class="button button-primary" href="#projects">Explore my projects ↘</a>
+          <a class="button button-secondary" href="#contact">Let's connect ↗</a>
+        </div>
+
+        <div class="social-links">
+          <a href="https://github.com/Puja-hubb" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/puja-kumari-296221304" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <a href="mailto:poojadixit74629@gmail.com">Email ↗</a>
         </div>
       </div>
 
-      <aside class="profile-card">
-        <div class="avatar">PK</div>
-        <h2>Puja Kumari</h2>
-        <p>Software Developer · Bengaluru, India</p>
-        <div class="profile-details">
-          <div class="detail"><span>Education</span><span>BCA</span></div>
-          <div class="detail"><span>Focus</span><span>Software & AI</span></div>
-          <div class="detail"><span>Projects</span><span>4 featured</span></div>
-          <div class="detail">
-            <span>GitHub</span>
-            <a href="https://github.com/Puja-hubb" target="_blank" rel="noopener noreferrer">Puja-hubb ↗</a>
-          </div>
+      <div class="profile-stage" aria-label="Profile photograph">
+        <div class="profile-halo"></div>
+        <div class="profile-frame">
+          <img
+            src="./profile.jpg.jpeg"
+            alt="Portrait of Puja Kumari"
+            onerror="this.onerror=null;this.src='https://placehold.co/600x800/15152a/c4b5fd?text=Upload+profile+photo';"
+          >
         </div>
-      </aside>
+        <div class="photo-caption">
+          <strong>Building. Learning. Growing.</strong>
+          <span>One project at a time ✨</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="container quick-stats">
+      <div class="stat reveal"><strong class="gradient-text">AI + Data</strong><span>Project interests</span></div>
+      <div class="stat reveal"><strong class="gradient-text">Full Stack</strong><span>Development</span></div>
+      <div class="stat reveal"><strong class="gradient-text">BCA</strong><span>Sharda University</span></div>
     </div>
 
-    <section id="about">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-label">A little about me</span>
-          <h2>Building my journey in technology.</h2>
-          <p>A foundation in computer applications, supported by practical projects and continuous learning.</p>
-        </div>
-
-        <div class="about-grid">
-          <article class="card">
-            <h3>Who I Am</h3>
-            <p>
-              I'm a BCA graduate from Sharda University with a strong interest
-              in software engineering, AI-powered applications, and building
-              technology that solves real-world problems.
-            </p>
-            <br>
-            <p>
-              Through hands-on projects, internships, and technical experience,
-              I've developed practical skills in Python programming, web
-              development, API integration, and database management. I enjoy
-              exploring how technology works, solving problems through code,
-              and turning ideas into functional applications.
-            </p>
-            <br>
-            <p>
-              I'm always looking for opportunities to take on meaningful
-              challenges, learn from experienced professionals, and contribute
-              to building reliable, user-focused software. My goal is to keep
-              growing as a developer while creating solutions that make a real difference.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Education</h3>
-            <div class="education-item">
-              <strong>Bachelor of Computer Applications (BCA)</strong>
-              <span>Sharda University</span><br>
-              <span>August 2023 – June 2026</span>
-            </div>
-            <div class="education-item">
-              <strong>Technical Interests</strong>
-              <span>Software Engineering, AI Applications, Web Development, Data Analytics</span>
-            </div>
-          </article>
-        </div>
+    <section class="section container" id="about">
+      <div class="reveal">
+        <p class="eyebrow">A little about me</p>
+        <h2 class="section-heading">Curious mind. <span class="gradient-text">Builder's mindset.</span></h2>
+      </div>
+      <div class="panel reveal">
+        <p>
+          I'm a BCA graduate from Sharda University with a strong interest
+          in software engineering, AI-powered applications, and building
+          technology that solves real-world problems.
+        </p>
+        <p>
+          Through hands-on projects, internships, and technical experience,
+          I've developed practical skills in Python programming, web
+          development, API integration, and database management. I enjoy
+          exploring how technology works, solving problems through code,
+          and turning ideas into functional applications.
+        </p>
+        <p>
+          I'm always looking for opportunities to take on meaningful
+          challenges, learn from experienced professionals, and contribute
+          to building reliable, user-focused software. My goal is to keep
+          growing as a developer while creating solutions that make a real difference.
+        </p>
       </div>
     </section>
 
-    <section id="skills">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-label">Technical toolkit</span>
-          <h2>Skills & technologies.</h2>
-          <p>Technologies and concepts included in my technical background.</p>
-        </div>
+    <section class="section container" id="skills">
+      <div class="reveal">
+        <p class="eyebrow">What I work with</p>
+        <h2 class="section-heading">Technical <span class="gradient-text">toolkit</span></h2>
+        <p class="section-intro">Technologies and concepts I use across my learning and project work.</p>
+      </div>
 
-        <div class="skills-grid">
-          <article class="skill-card">
-            <h3>Programming Languages</h3>
-            <div class="tags">
-              <span class="tag">Python</span><span class="tag">Java</span>
-              <span class="tag">JavaScript</span><span class="tag">TypeScript</span>
-              <span class="tag">SQL</span>
-            </div>
-          </article>
+      <div class="skills-grid">
+        <article class="skill-card reveal">
+          <div class="skill-icon">⌘</div>
+          <h3>Programming</h3>
+          <p>Writing code, solving problems, and building application logic.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Java</span><span class="tag">JavaScript</span><span class="tag">TypeScript</span><span class="tag">SQL</span></div>
+        </article>
 
-          <article class="skill-card">
-            <h3>Web Development</h3>
-            <div class="tags">
-              <span class="tag">HTML</span><span class="tag">CSS</span>
-              <span class="tag">React</span><span class="tag">Node.js</span>
-              <span class="tag">Express</span><span class="tag">REST APIs</span>
-            </div>
-          </article>
+        <article class="skill-card reveal">
+          <div class="skill-icon">◈</div>
+          <h3>Web Development</h3>
+          <p>Creating responsive interfaces and application features.</p>
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Express</span></div>
+        </article>
 
-          <article class="skill-card">
-            <h3>Data & Analytics</h3>
-            <div class="tags">
-              <span class="tag">Pandas</span><span class="tag">NumPy</span>
-              <span class="tag">Oracle Analytics Cloud</span>
-              <span class="tag">Data Visualization</span>
-            </div>
-          </article>
+        <article class="skill-card reveal">
+          <div class="skill-icon">⌁</div>
+          <h3>Backend & APIs</h3>
+          <p>Application services, data exchange, and integration concepts.</p>
+          <div class="tags"><span class="tag">REST APIs</span><span class="tag">FastAPI</span><span class="tag">API Integration</span></div>
+        </article>
 
-          <article class="skill-card">
-            <h3>Databases</h3>
-            <div class="tags">
-              <span class="tag">MySQL</span><span class="tag">SQL</span>
-              <span class="tag">Database Concepts</span>
-            </div>
-          </article>
+        <article class="skill-card reveal">
+          <div class="skill-icon">▤</div>
+          <h3>Data & Databases</h3>
+          <p>Working with structured data, analysis, and data storage.</p>
+          <div class="tags"><span class="tag">MySQL</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Data Analytics</span></div>
+        </article>
 
-          <article class="skill-card">
-            <h3>Tools & Platforms</h3>
-            <div class="tags">
-              <span class="tag">Git</span><span class="tag">GitHub</span>
-              <span class="tag">AWS</span><span class="tag">Oracle Analytics Cloud</span>
-            </div>
-          </article>
+        <article class="skill-card reveal">
+          <div class="skill-icon">✧</div>
+          <h3>Cloud & Tools</h3>
+          <p>Development tools, version control, and cloud fundamentals.</p>
+          <div class="tags"><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">AWS</span><span class="tag">Oracle Analytics Cloud</span></div>
+        </article>
 
-          <article class="skill-card">
-            <h3>Core Concepts</h3>
-            <div class="tags">
-              <span class="tag">Data Structures</span><span class="tag">Debugging</span>
-              <span class="tag">Testing</span><span class="tag">Operating Systems</span>
-              <span class="tag">Problem Solving</span>
-            </div>
-          </article>
-        </div>
+        <article class="skill-card reveal">
+          <div class="skill-icon">◎</div>
+          <h3>Engineering Practices</h3>
+          <p>Building maintainable applications and investigating issues.</p>
+          <div class="tags"><span class="tag">Debugging</span><span class="tag">Testing</span><span class="tag">DSA</span><span class="tag">Problem Solving</span></div>
+        </article>
       </div>
     </section>
 
-    <section id="projects">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-label">Selected work</span>
-          <h2>Projects I've built.</h2>
-          <p>
-            A selection of software, AI-focused, and data-oriented projects.
-            Explore the source code to learn more about each implementation.
-          </p>
-        </div>
+    <section class="section container" id="projects">
+      <div class="reveal">
+        <p class="eyebrow">Selected work</p>
+        <h2 class="section-heading">Projects that bring ideas <span class="gradient-text">to life.</span></h2>
+        <p class="section-intro">Explore my projects, their goals, and the technologies behind them.</p>
+      </div>
 
-        <div class="projects-grid">
-          <article class="project-card featured">
-            <div class="project-top">
-              <div class="project-icon">◈</div><span class="project-number">PROJECT 01</span>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <article class="project-card reveal">
+          <div class="project-image">
+            <img
+              src="./dataguard-dashboard.png"
+              alt="DataGuard AI analytics dashboard preview showing revenue trends and AI insights"
+              loading="lazy"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='grid';"
+            >
+            <div class="project-image-placeholder" style="display:none">
+              <div class="symbol">◈</div>
+              <strong>DataGuard AI</strong>
+              <p>Upload dataguard-dashboard.png to show the dashboard preview.</p>
             </div>
+          </div>
+          <div class="project-content">
+            <span class="project-number">01 / AI & ANALYTICS</span>
             <h3>DataGuard AI</h3>
             <p>
-              A data reliability dashboard for monitoring data quality and
-              investigating unusual revenue patterns. Designed to make
-              potential data issues and analytical signals easier to explore.
+              An AI-oriented data reliability and analytics project focused
+              on monitoring data quality and investigating unusual revenue
+              patterns through a dashboard experience.
             </p>
-            <div class="tags">
-              <span class="tag">Data Analytics</span><span class="tag">Data Quality</span>
-              <span class="tag">Dashboard</span><span class="tag">Anomaly Investigation</span>
-            </div>
+            <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Analytics</span><span class="tag">Data Quality</span></div>
             <div class="project-actions">
-              <a class="project-link" href="https://github.com/Puja-hubb" target="_blank" rel="noopener noreferrer">Explore on GitHub ↗</a>
+              <a class="button button-primary" href="https://github.com/Puja-hubb/dataguard-ai" target="_blank" rel="noopener noreferrer">View Repository ↗</a>
             </div>
-          </article>
+          </div>
+        </article>
 
-          <article class="project-card featured">
-            <div class="project-top">
-              <div class="project-icon">⌘</div><span class="project-number">PROJECT 02</span>
+        <!-- Project 2 -->
+        <article class="project-card reveal">
+          <div class="project-image">
+            <div class="project-image-placeholder">
+              <div class="symbol gradient-text">⌘ ✧</div>
+              <strong>Sentinel AI Code Intelligence</strong>
+              <p>AI-assisted code intelligence</p>
             </div>
+          </div>
+          <div class="project-content">
+            <span class="project-number">02 / AI & DEVELOPER TOOLS</span>
             <h3>Sentinel AI Code Intelligence</h3>
             <p>
-              An AI-focused code intelligence project exploring ways to help
-              developers understand and analyze source code. Visit the
-              repository for implementation details.
+              A code-intelligence project exploring AI-powered assistance
+              for understanding code and supporting developer workflows.
             </p>
-            <div class="tags">
-              <span class="tag">Artificial Intelligence</span>
-              <span class="tag">Code Intelligence</span>
-              <span class="tag">Software Development</span>
-            </div>
+            <div class="tags"><span class="tag">AI</span><span class="tag">Code Intelligence</span><span class="tag">Developer Tools</span></div>
             <div class="project-actions">
-              <a class="project-link" href="https://github.com/Puja-hubb/sentinel-ai-code-intelligence" target="_blank" rel="noopener noreferrer">View GitHub Repository ↗</a>
+              <a class="button button-primary" href="https://github.com/Puja-hubb/sentinel-ai-code-intelligence" target="_blank" rel="noopener noreferrer">View Repository ↗</a>
             </div>
-          </article>
+          </div>
+        </article>
 
-          <article class="project-card">
-            <div class="project-top">
-              <div class="project-icon">◎</div><span class="project-number">PROJECT 03</span>
+        <!-- Project 3 -->
+        <article class="project-card reveal">
+          <div class="project-image">
+            <div class="project-image-placeholder">
+              <div class="symbol gradient-text">◷</div>
+              <strong>PrepTrack</strong>
+              <p>Organize your preparation</p>
             </div>
+          </div>
+          <div class="project-content">
+            <span class="project-number">03 / PRODUCTIVITY</span>
             <h3>PrepTrack</h3>
             <p>
-              A placement preparation analyzer that organizes student
-              preparation information, validates inputs, and uses priority
-              logic to help identify areas requiring attention. The project
-              includes automated tests for its implemented functionality.
+              A preparation-focused project designed to organize learning
+              activities and help users keep track of their progress.
             </p>
-            <div class="tags">
-              <span class="tag">Python</span><span class="tag">Validation</span>
-              <span class="tag">Priority Logic</span><span class="tag">Testing</span>
-            </div>
+            <div class="tags"><span class="tag">Web Development</span><span class="tag">Productivity</span></div>
             <div class="project-actions">
-              <a class="project-link" href="https://github.com/Puja-hubb/Project1" target="_blank" rel="noopener noreferrer">View GitHub Repository ↗</a>
+              <a class="button button-primary" href="https://github.com/Puja-hubb/Project1" target="_blank" rel="noopener noreferrer">View Repository ↗</a>
             </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-top">
-              <div class="project-icon">▤</div><span class="project-number">PROJECT 04</span>
-            </div>
-            <h3>Expense Tracker Web Application</h3>
-            <p>
-              A responsive expense tracking interface for organizing spending
-              and reviewing financial activity. Features include categorized
-              expenses, dashboard charts, monthly budget alerts, and bill
-              reminders using browser local storage.
-            </p>
-            <div class="tags">
-              <span class="tag">React</span><span class="tag">TypeScript</span>
-              <span class="tag">Tailwind CSS</span><span class="tag">Recharts</span>
-              <span class="tag">Local Storage</span>
-            </div>
-            <div class="project-actions">
-              <a class="project-link" href="https://github.com/Puja-hubb" target="_blank" rel="noopener noreferrer">Explore on GitHub ↗</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-label">Professional journey</span>
-          <h2>Experience.</h2>
-          <p>My software development training and internship experience.</p>
-        </div>
-
-        <div class="experience-list">
-          <article class="experience-item">
-            <div class="experience-date">June 2026 – Present</div>
-            <div>
-              <h3>Full Stack Developer</h3>
-              <div class="experience-company">KodNest Technologies</div>
-              <ul>
-                <li>Developing technical skills across software development concepts and practical projects.</li>
-                <li>Building familiarity with programming, web technologies, debugging, and application development.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="experience-item">
-            <div class="experience-date">June 2025 – July 2025</div>
-            <div>
-              <h3>Python Developer Intern</h3>
-              <div class="experience-company">CodSoft</div>
-              <ul>
-                <li>Gained practical exposure to Python programming through internship tasks.</li>
-                <li>Practiced implementing program logic and developing solutions to assigned problems.</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="certifications">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-label">Learning & development</span>
-          <h2>Certifications.</h2>
-          <p>Courses and job simulations completed as part of my professional learning.</p>
-        </div>
-
-        <div class="cert-grid">
-          <article class="cert-item"><strong>AWS Cloud Practitioner</strong><span>Amazon Web Services</span></article>
-          <article class="cert-item"><strong>Oracle Analytics Cloud 2025 Certified Professional</strong><span>Oracle</span></article>
-          <article class="cert-item"><strong>Advanced Software Engineering Job Simulation</strong><span>Walmart USA · Forage</span></article>
-          <article class="cert-item"><strong>Data Analysis with Python</strong><span>IBM · Cognitive Class</span></article>
-          <article class="cert-item"><strong>Data Analytics with Generative AI</strong><span>Simplilearn SkillUP</span></article>
-          <article class="cert-item"><strong>Data Visualisation</strong><span>Tata · Forage</span></article>
-          <article class="cert-item"><strong>Full Stack Java Development</strong><span>Course Certificate</span></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <div class="contact-box">
-          <span class="section-label">Let's connect</span>
-          <h2>Have an opportunity in mind?</h2>
-          <p>
-            I'm interested in software development opportunities where I can
-            apply my skills, contribute to projects, and continue learning.
-            Feel free to reach out.
-          </p>
-          <div class="button-row">
-            <a class="btn btn-primary" href="mailto:poojadixit74629@gmail.com">Email Me ↗</a>
-            <a class="btn btn-secondary" href="https://www.linkedin.com/in/puja-kumari-296221304" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-            <a class="btn btn-secondary" href="https://github.com/Puja-hubb" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
           </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card reveal">
+          <div class="project-image">
+            <div class="project-image-placeholder">
+              <div class="symbol gradient-text">₹ ↗</div>
+              <strong>Expense Tracker</strong>
+              <p>Personal finance dashboard</p>
+            </div>
+          </div>
+          <div class="project-content">
+            <span class="project-number">04 / FINANCE</span>
+            <h3>Expense Tracker</h3>
+            <p>
+              A personal finance interface concept for recording expenses,
+              organizing spending categories, and visualizing budgets.
+            </p>
+            <div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Tailwind CSS</span><span class="tag">Charts</span></div>
+            <div class="project-actions">
+              <a class="button button-secondary" href="https://github.com/Puja-hubb" target="_blank" rel="noopener noreferrer">Find Repository ↗</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="experience">
+      <div class="reveal">
+        <p class="eyebrow">My journey</p>
+        <h2 class="section-heading">Experience & <span class="gradient-text">education</span></h2>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-card reveal">
+          <h3>Full Stack Developer — KodNest Technologies</h3>
+          <p class="meta">June 2026 – Present</p>
+          <p>Technical experience and development practice. Add your exact responsibilities and project contributions here so recruiters can understand your work.</p>
+        </article>
+
+        <article class="timeline-card reveal">
+          <h3>Python Developer Intern — CodSoft</h3>
+          <p class="meta">June 2025 – July 2025</p>
+          <p>Python development internship. Add the specific tasks, assignments, and outcomes you completed during your internship.</p>
+        </article>
+
+        <article class="timeline-card reveal">
+          <h3>Bachelor of Computer Applications (BCA)</h3>
+          <p class="meta">Sharda University · August 2023 – June 2026</p>
+          <p>Academic foundation in computer applications, programming, databases, and software development.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="certifications">
+      <div class="reveal">
+        <p class="eyebrow">Continuous learning</p>
+        <h2 class="section-heading">Certifications & <span class="gradient-text">learning</span></h2>
+        <p class="section-intro">Courses and job simulations completed as part of my professional development.</p>
+      </div>
+
+      <div class="cert-grid">
+        <article class="certificate-card reveal"><span class="certificate-icon">☁</span><div><h3>AWS Cloud Practitioner Essentials</h3><p>AWS Skill Builder</p></div></article>
+        <article class="certificate-card reveal"><span class="certificate-icon">▥</span><div><h3>Data Analysis with Python</h3><p>IBM / Cognitive Class</p></div></article>
+        <article class="certificate-card reveal"><span class="certificate-icon">◈</span><div><h3>Data Analytics with Generative AI</h3><p>Simplilearn SkillUP</p></div></article>
+        <article class="certificate-card reveal"><span class="certificate-icon">▤</span><div><h3>Data Visualisation</h3><p>Tata / Forage job simulation</p></div></article>
+        <article class="certificate-card reveal"><span class="certificate-icon">◎</span><div><h3>Oracle Analytics Cloud 2025</h3><p>Certified Professional</p></div></article>
+        <article class="certificate-card reveal"><span class="certificate-icon">⌘</span><div><h3>Advanced Software Engineering</h3><p>Walmart USA / Forage job simulation</p></div></article>
+        <article class="certificate-card reveal"><span class="certificate-icon">⌨</span><div><h3>Full Stack Java Development</h3><p>Course certificate</p></div></article>
+      </div>
+    </section>
+
+    <section class="section container" id="contact">
+      <div class="panel contact-panel reveal">
+        <p class="eyebrow">Let's connect</p>
+        <h2 class="section-heading">Have an opportunity in mind?</h2>
+        <p class="section-intro">
+          I'm interested in opportunities to learn, build useful software,
+          and contribute to engineering teams.
+        </p>
+        <div class="button-row" style="justify-content:center">
+          <a class="button button-primary" href="mailto:poojadixit74629@gmail.com">Email me ↗</a>
+          <a class="button button-secondary" href="https://www.linkedin.com/in/puja-kumari-296221304" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a>
+          <a class="button button-secondary" href="https://github.com/Puja-hubb" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
         </div>
+        <a class="contact-email" href="mailto:poojadixit74629@gmail.com">poojadixit74629@gmail.com</a>
       </div>
     </section>
   </main>
@@ -776,12 +832,29 @@
   <footer>
     <div class="container footer-inner">
       <span>© <span id="year"></span> Puja Kumari</span>
-      <span>Designed and built with HTML & CSS.</span>
+      <span>Designed with curiosity and code ✦</span>
     </div>
   </footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      revealElements.forEach((element) => observer.observe(element));
+    } else {
+      revealElements.forEach((element) => element.classList.add("visible"));
+    }
   </script>
 </body>
 </html>
